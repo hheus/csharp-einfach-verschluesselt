@@ -24,6 +24,10 @@ namespace EinfachVerschluesselt
             Console.WriteLine("Zum Beenden bitte 'Enter' drücken");
             Console.ReadLine();
         }
-        
+
+        private static string VerschluesselnMitRot13(string unverschluesselterText)
+        {
+            return "Verschluesselung noch nicht implementiert";
+        }
     }
 }
