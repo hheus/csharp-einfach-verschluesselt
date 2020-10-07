@@ -23,7 +23,6 @@ namespace EinfachVerschluesselt
             Console.WriteLine();
 
             // Warten bis der Benutzer das Programm beendet
-
             Console.WriteLine("Zum Beenden bitte 'Enter' drücken");
             Console.ReadLine();
         }
@@ -34,6 +33,13 @@ namespace EinfachVerschluesselt
             // Umlaute entfernen (normalisieren)
             // Zahlen und Sonderzeichen ignorieren
             // Alle Buchstaben um 13 Stellen verschieben
+
+
+            string temp1 = unverschluesselterText.ToUpper();
+            
+            
+            
+
 
             return "Verschluesselung noch nicht implementiert";
         }
