@@ -18,6 +18,9 @@ namespace EinfachVerschluesselt
             string verschluesselterText = VerschluesselnMitRot13(zuverschlüsselnderText);
 
             // verschlüsselten Text ausgeben
+            Console.WriteLine();
+            Console.WriteLine($"Der verschlüsselte Text lautet: {verschluesselterText}");
+            Console.WriteLine();
 
             // Warten bis der Benutzer das Programm beendet
 
