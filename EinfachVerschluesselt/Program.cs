@@ -34,14 +34,28 @@ namespace EinfachVerschluesselt
             // Zahlen und Sonderzeichen ignorieren
             // Alle Buchstaben um 13 Stellen verschieben
 
+            // Umwandlung in Großbuchstaben
+            string textInGroß = unverschluesselterText.ToUpper();
+            string verschluesselterText = "";
+            string[] umlaute = { "Ä", "Ö", "Ü" };
+            string[] norm = { "AE", "OE", "UE" };
 
-            string temp1 = unverschluesselterText.ToUpper();
-            
-            
-            
+            foreach (char c in textInGroß)              // Für jeden Buchstaben
+            {
+                foreach (string s in umlaute)           // Jeder Buchstabe wird auf Umlaute geprüft
+                {
+                    if (textInGroß.Contains(s))         // Wenn der Buchstabe ein Umlaut ist ...
+                    {
+                        int index = Array.IndexOf(umlaute, s); // Der 1., 2. oder 3. Index (bzw. Umlaut)
+                        textInGroß = textInGroß.Replace(umlaute[index], norm[index]); // Ersetze den Umlaut durch die Norm
+                    }
+                }
+            }
 
 
-            return "Verschluesselung noch nicht implementiert";
+            verschluesselterText = textInGroß;
+
+            return verschluesselterText;
         }
     }
 }
